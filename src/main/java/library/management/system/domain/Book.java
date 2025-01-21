@@ -30,6 +30,9 @@ public class Book {
     @Column(name = "isbn")
     private String isbn;
 
+    @Column(name = "quantity", nullable = false)
+    private int quantity;
+
     @Column(name = "publication_date", columnDefinition = "DATE")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy/MM/dd")
     @JsonDeserialize(using = LocalDateDeserializer.class)
@@ -40,10 +43,11 @@ public class Book {
     public Book() {}
 
     // Constructor
-    public Book(String title, String author, String isbn, LocalDate publicationDate) {
+    public Book(String title, String author, String isbn,int quantity, LocalDate publicationDate) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
+        this.quantity = quantity;
         this.publicationDate = publicationDate;
     }
 
@@ -78,6 +82,14 @@ public class Book {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public LocalDate getPublicationDate() {
