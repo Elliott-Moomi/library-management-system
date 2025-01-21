@@ -3,10 +3,11 @@ package library.management.system.service;
 import jakarta.persistence.EntityNotFoundException;
 import library.management.system.domain.Book;
 import library.management.system.repository.BookRepository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-
+@Service
 public class BookService {
     private final BookRepository bookRepository;
 
