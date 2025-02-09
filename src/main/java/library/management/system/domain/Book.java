@@ -39,10 +39,8 @@ public class Book {
     @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate publicationDate;
 
-    // Default constructor required for JPA
     public Book() {}
 
-    // Constructor
     public Book(String title, String author, String isbn,int quantity, LocalDate publicationDate) {
         this.title = title;
         this.author = author;
@@ -51,7 +49,6 @@ public class Book {
         this.publicationDate = publicationDate;
     }
 
-    // Getters and setters
     public Long getId() {
         return id;
     }
