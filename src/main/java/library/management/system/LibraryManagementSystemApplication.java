@@ -1,6 +1,5 @@
 package library.management.system;
 
-import library.management.system.domain.Member;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
