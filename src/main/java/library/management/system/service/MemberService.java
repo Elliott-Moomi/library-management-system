@@ -46,7 +46,6 @@ public class MemberService {
         member.setEmail(updatedMember.getEmail());
         member.setAge(updatedMember.getAge());
         member.setContact(updatedMember.getContact());
-        member.setBooks(updatedMember.getBooks());
 
         memberRepository.save(member);
 
