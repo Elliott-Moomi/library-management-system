@@ -25,14 +25,6 @@ public class Member {
     @Column(name = "contact")
     private String contact;
 
-    @ManyToMany
-    @JoinTable(
-            name = "member_books",
-            joinColumns = @JoinColumn(name = "member_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "book_id", referencedColumnName = "id")
-    )
-    private List<Book> books;
-
     public Member() {}
 
     public Member(String firstName, String lastName, int age, String email, String contact) {
@@ -67,10 +59,6 @@ public class Member {
         return contact;
     }
 
-    public List<Book> getBooks() {
-        return books;
-    }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -93,9 +81,5 @@ public class Member {
 
     public void setContact(String contact) {
         this.contact = contact;
-    }
-
-    public void setBooks(List<Book> books) {
-        this.books = books;
     }
 }
