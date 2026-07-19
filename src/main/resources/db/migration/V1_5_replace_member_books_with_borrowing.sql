@@ -1,4 +1,4 @@
--- DROP TABLE IF EXISTS member_books;
+DROP TABLE IF EXISTS member_books;
 
 CREATE TABLE borrowing
 (
