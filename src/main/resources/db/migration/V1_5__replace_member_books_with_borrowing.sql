@@ -1,7 +1,6 @@
 DROP TABLE IF EXISTS member_books;
 
-CREATE TABLE borrowing
-(
+CREATE TABLE IF NOT EXISTS borrowing (
     id            BIGSERIAL PRIMARY KEY,
 
     member_id     BIGINT NOT NULL,
@@ -13,10 +12,10 @@ CREATE TABLE borrowing
 
     CONSTRAINT fk_borrowing_member
         FOREIGN KEY (member_id)
-            REFERENCES (id) ,
+            REFERENCES member(id) ,
 
     CONSTRAINT fk_borrowing_book
         FOREIGN KEY (book_id)
-        REFERENCES (id)
+        REFERENCES book(id)
 );
 
